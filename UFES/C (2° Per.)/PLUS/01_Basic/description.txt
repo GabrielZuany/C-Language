@@ -1,0 +1,22 @@
+# PigEsperanto
+
+Para esta tarefa, você deve implementar um codificador para Pig Esperanto, uma versão simplificada do jogo de linguagem Pig Élfico, que por sua vez é semelhante ao Pig Latin.
+
+Pig Esperanto funciona traduzindo um texto, uma palavra de cada vez. Para os fins desta atribuição, uma palavra consiste em uma sequência consecutiva de caracteres para os quais a função isalpha, definido no arquivo de inclusão ctype.h, retorna true. Quaisquer caracteres para os quais isalpha retorne false devem ser ignorados.
+Para cada palavra de entrada:
+1. Mova a primeira letra para o final.
+2. Adicione as letras “an” ao final de qualquer palavra de três letras ou menos e “o” ao final de qualquer palavra mais longa.
+3. Faça com que a nova primeira letra da palavra corresponda ao "case" da antiga primeira letra da palavra. Isto é, se a primeira letra era maiúscula, a nova primeira letra da palavra deve ser maiúscula também.
+4. A capitalização pode ser testada usando as macros isupper e islower e modificada usando as macros toupper e tolower. Como isalpha, todos eles são definidos em ctype.h.
+
+# Sua tarefa
+
+Você deve escrever um programa encode.c que recebe uma entrada da stdin, codifica-a usando as regras acima e escreve o resultado em stdout.
+
+Por exemplo, dada a entrada:
+
+> Ola, mundo do earte mais uma vez.
+
+ Seu programa deve produzir:
+
+> Laoan, undomo odan arteeo aismo mauan ezvan
