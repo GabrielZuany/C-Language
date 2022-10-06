@@ -1,3 +1,2 @@
-# Laguage C repository
-
-Repository with exercises and little projects (Projects) in C.
+# Studying C by my own...
+(2021 - today)
