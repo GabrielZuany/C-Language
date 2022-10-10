@@ -1,3 +1,15 @@
+/**
+ * @file main.c
+ * @author Gabriel Zuany Duarte Vargas (https://github.com/GabrielZuany)
+ * @brief Tic-Tac-Toe Game
+ * @version 1.1
+ * @date 2022-10-10 (last update)
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
 #include <stdio.h>
 #include "tGame.h"
 
