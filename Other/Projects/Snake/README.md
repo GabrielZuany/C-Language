@@ -17,7 +17,7 @@
 
     ---Objetivo: Ganhar o maximo de pontos possiveis---
 
-    ---Ejoy ;)---
+    ---Ejoy ;)<br>
 
 
 ## Estatísticas/Inicialização:
@@ -35,18 +35,18 @@
   - [Running](https://github.com/GabrielZuany/C-Language/blob/main/Other/Projects/Snake/media/run.mp4) <br><br>
 
 ## Additional Info:
--->Realizado na disciplina de Prog.I (1o Periodo) da Universidade Federal do Espirito Santo (UFES).
--->Objetivo: Aplicar conhecimentos de modularizacao, criacao e manipulacao de tipos de dados definidos pelo usuario, logica e manipulacao de arquivos.
--->Extra: Organizacao de codigo por meio da separacao em bilbiotecas com as funcoes proprias criadas para esse problema.
+-->Realizado na disciplina de Prog.I (1o Periodo) da Universidade Federal do Espirito Santo (UFES).<br>
+-->Objetivo: Aplicar conhecimentos de modularizacao, criacao e manipulacao de tipos de dados definidos pelo usuario, logica e manipulacao de arquivos.<br>
+-->Extra: Organizacao de codigo por meio da separacao em bilbiotecas com as funcoes proprias criadas para esse problema.<br>
 
----Autor do codigo: Gabriel Zuany Duarte Vargas---
----Data: 2022, Agosto---
----Versao: 1.2---
-
----Ultima atualizacao: 13/08/2022 (V 1.1 -> V 1.2)---
-    --- 1. Code refactoring;
-    --- 2. Separation of functions in created libraries;
-    --- 3.Creation of execution scripts.
-    --- 4.Project folder organization.
+---Autor do codigo: Gabriel Zuany Duarte Vargas<br>
+---Data: 2022, Agosto<br>
+---Versao: 1.2<br>
+<br>
+---Ultima atualizacao: 13/08/2022 (V 1.1 -> V 1.2)<br>
+    --- 1. Code refactoring;<br>
+    --- 2. Separation of functions in created libraries;<br>
+    --- 3.Creation of execution scripts.<br>
+    --- 4.Project folder organization.<br><br>
     
 =============OPERAVEL, POR ENQUANTO, APENAS NO LINUX;==============
