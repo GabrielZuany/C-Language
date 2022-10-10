@@ -3,8 +3,20 @@ To run:<br>
 - Go to your terminal in /path/TicTacToe/RunScript;<br>
 - Write: $chmod +777 ./run.sh <br>
 - Write:$./run.sh <br>
-Enjoy! ;)<br>
 
+<img src="https://github.com/GabrielZuany/C-Language/blob/main/Other/Projects/TicTacToe/img/command.png"/><br>
+-------
+-------
+### Initial Board:
+<img src="https://github.com/GabrielZuany/C-Language/blob/main/Other/Projects/TicTacToe/img/initialboard.png"/><br>
+-------
+-------
+### Invalid position:
+<img src="https://github.com/GabrielZuany/C-Language/blob/main/Other/Projects/TicTacToe/img/img1.png"/><br>
+-------
+-------
+### Player Wins:
+<img src="https://github.com/GabrielZuany/C-Language/blob/main/Other/Projects/TicTacToe/img/img2.png"/><br>
 -------
 ## Update (V 1.0 -> V 1.1):
     1. Code refactoring;
