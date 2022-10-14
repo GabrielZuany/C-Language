@@ -1,0 +1,59 @@
+Gerenciamento de Memória
+
+=>Malloc
+
+1. Discuta, passo a passo, o efeito do seguinte fragmento de código:
+
+    int *v;
+    v = malloc (10 * sizeof (int));
+
+2. Discuta o efeito do seguinte fragmento de código:
+
+    x = malloc (10 * sizeof *x);
+
+
+=>Free
+
+3.O que há de errado com o seguinte fragmento de código?
+
+    int *v;
+    v = malloc (100 * sizeof (int));
+    v[0] = 999;
+    free (v+1);
+
+4. A seguinte função promete devolver um vetor com os 3 primeiros números primos maiores que 1000. Onde está o erro?
+
+    int *primos (void) {
+    int v[3];
+    v[0] = 1009; v[1] = 1013; v[2] = 1019;
+    return v;
+    }
+
+5. Escreva uma função que desaloque a matriz M alocada abaixo. Quais devem ser os parâmetros da função?
+
+    //M[i][j] é o elemento de M que da linha i com a coluna j
+    int **M;
+    M = malloc (m * sizeof (int *));
+    for (int i = 0; i < m; ++i)
+        M[i] = malloc (n * sizeof (int));
+
+6. Faça um programa que declare uma matriz conforme o exercício anterior, com m sendo informado pelo usuário. Usando a resposta do exercício anterior,
+desaloque essa matriz. Compile utilizando a flag -g e execute o teste com o valgrind usando o comando abaixo. Seu programa apresenta vazamento de
+memória? Se sim, corrija-o para não ter vazamento:
+
+    valgrind ./nomedoseuprograma
+
+7. Faça um programa que leia números inteiros até que o usuário entre com algum dígito não númerico e armazene os números em um vetor. Neste caso, você
+não sabe quantos números o usuário vai entrar e deverá alocar um vetor com um tamanho inicial (você pode fazer uma estrutura que armazene a quantidade
+de elementos no vetor). A saída do programa deve ser a posição no vetor que contém o maior número da lista, a primeira posição caso o maior número se
+repita.
+Contudo você NÃO pode utilizar função realloc padrão e deve implementar a própria função de rearranjo do vetor, chamado meurealloc conforme a assinatura de
+função abaixo.
+
+    /** Retorna um vetor com um fator de x, de aumento em relação ao tamanho do vetor (N), copia os elementos de v no novo vetor e
+    libera V da memória. */ 
+    int *meurealloc (int *v, unsigned int N);
+
+a. Teste com as entradas disponíveis em 07-input 
+b. Teste com o valgrind e garanta
+que seu programa não tem vazamento de mémória. Garanta também que não esteja utilizando espaço não reservado, por exemplo, aloca 10 inteiros mas o vetor contem mais de 10 elementos e aparentemente funciona.
