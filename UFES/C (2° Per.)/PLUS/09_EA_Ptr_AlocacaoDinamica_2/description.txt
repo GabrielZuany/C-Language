@@ -1,0 +1,72 @@
+EA  – Ponteiro de Ponteiros -  Desflorestamento
+
+Objetivo:      Desenvovlver   TADs  utilizando   tipos   opacos, isto  é,  com  a  implementação  da
+estrutura   apenas   no   arquivo   código   .c.         Para     este   exercício,   iremos   utilizar   o   EA
+Desflorestamento como base.     A sua missão é recodificar para que todos os TADs sejam
+opacos. Neste exercício, também será necessário alocar  e liberar dinamicamente uma lista de
+terrenos.
+
+O Projeto de Monitoramento do Desflorestamento na Amazônia Legal (Prodes/Inpe) fiscaliza
+o desmatamento da floresta amazônica por meio de satélites e fiscais do Instituto Brasileiro do
+Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA). A fiscalização identifica o
+responsável   pelo   desmatamento   e   aplica   multas   em   relação   ao   número   de   hectares
+desmatados.
+
+Implemente um programa que calcule a média  e desvio padrão de desmatamento nos terrenos
+com   base   nos   hectares.  Existem   3   tipos   de   terrenos   que   podem   ser   calculados:   terrenos
+retangulares, circulares e triangulares. 
+
+Crie     e/ou   altere   os   TADs   que   armazenem   as   informações   de   cada   tipo   de   terreno,
+considerando que agora todos os TADs devem ser opacos. 
+
+Círculos: os terrenos em forma circular devem armazenar o raio do terreno. Lembre-se que a
+área do círculo = PI * raio^2 e que 1 hectare = 10000 metros quadrados.
+
+Retangulares: terrenos em forma retangular devem armazenar o comprimento e a largura do
+terreno.
+
+Triangulares: os terrenos em forma triangular, para ser facilitado o tratamento de dados, tem
+como armazenamento o comprimento e a largura do terreno.
+
+Considere um TAD  Terreno que possui  um  vetor para cada tipo de terreno, bem como um
+contador que mantém a quantidade de elementos em cada vetor, e uma quantidade total de
+terrenos.   Para simplificar, cada vetor pode ser inicializado com a quantidade de terrenos ,
+definida pelo usuário na primeira linha de entrada.  
+
+A seguir, segue um exemplo do .h do tipo Terreno:
+
+A saída  do  programa será a média e o desvio padrão de desmatamento.    
+A   média é calculada como: A   soma de todas as áreas divido pelo número de áreas, isto é,
+
+Ma=∑(area/numero de areas)
+
+O Desvio padrão é calculado  RAIZ(∑ ((xi-MA)^2)/n)   onde xi é   área desmatada,  MA é a
+média e n a  quantidade de áreas. 
+
+ 
+IMPORTANTE: Cada TAD deverá ser alocado  e  liberado da memória  corretamente.  
+Verifique seu código utilizando o valgrind para garantir que não há vazamento de memória. 
+
+Entradas:
+Na primeira linha é dado um número N referente ao número de terrenos a serem lidos
+(1 < N < 100). As próximas linhas referem-se ao tipo do terreno (C, R ou T), e seus tipos de
+dados referentes. (lembre-se de utilizar os conceitos de TADs opacas, pois será avaliado neste
+quesito).
+C raio
+R comprimento largura
+T base altura
+
+Saída:
+A saída do programa deve informar a média e desvio padrão do terreno desmatado.
+
+Entrada
+5
+C 100
+R 150 200
+R 500 90
+T 1000 80
+C 2000
+
+Saída
+MEDIA DESMATAMENTO: 254.248
+DESVIO PADRAO: 501.176
