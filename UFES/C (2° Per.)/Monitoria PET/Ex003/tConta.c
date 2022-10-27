@@ -9,7 +9,7 @@ struct tConta{
 };
 
 tConta** InicializaMemoria(int init){
-    tConta** c = calloc(sizeof(tConta), init);
+    tConta** c = calloc(sizeof(tConta*), init);
     return c;
 }
 
