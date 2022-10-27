@@ -4,8 +4,14 @@
 typedef struct tUsuario tUsuario;
 
 
+/**
+ * @brief Cadastra um usuário a partir de valores dados.
+ * 
+ * @param nome nome do usuário
+ * @param cpf cpf do usuário
+ * @return tUsuario* ponteiro para o usuario.
+ */
 tUsuario* RegistraUsuario(char *nome, int cpf);
-void DeletaUsuario(tUsuario *u);
 
 /**
  * @brief Imprime informções registradas do usuário.

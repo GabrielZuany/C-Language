@@ -5,9 +5,11 @@
 
 typedef struct tConta tConta;
 
+tConta** InicializaMemoria(int init);
+
 void ImprimeRelatorio(tConta **conta, int qtd);
 
-void DeletaConta(tConta *conta);
+void DeletaConta(tConta **conta, int num);
 
 void CriaConta(tUsuario *usuario, tConta *conta);
 
@@ -19,7 +21,7 @@ void Transferencia(tConta *dest, tConta *orig, float valor);
 
 void Sair();
 
-tConta* InicializaConta(int num_conta);
+tConta* InicializaConta(int num_conta, tUsuario* usuario);
 
 void ImprimeSaldo(tConta *conta);
 

@@ -23,8 +23,3 @@ void ImprimeUsuario(tUsuario* usuario){
 void RegistraNome(tUsuario *usuario, char* nome){
     strcpy(usuario->nome, nome);
 }
-
-void DeletaUsuario(tUsuario *u){
-    free(u->nome);
-    free(u);
-}

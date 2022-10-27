@@ -8,6 +8,11 @@ struct tConta{
     float saldo;
 };
 
+tConta** InicializaMemoria(int init){
+    tConta** c = calloc(sizeof(tConta), init);
+    return c;
+}
+
 void ImprimeConta(tConta* conta){
     printf("Conta: %d\n", conta->conta);
     printf("Saldo: R$ %.2f\n", conta->saldo);
@@ -15,15 +20,12 @@ void ImprimeConta(tConta* conta){
     printf("\n");
 }
 
-tConta* InicializaConta(int num_conta){
+tConta* InicializaConta(int num_conta, tUsuario* usuario){
     tConta* conta = malloc(sizeof(tConta));
+    conta->usuario = usuario;
     conta->conta  = num_conta;
     conta->saldo = 0.0;
     return conta;
-}
-
-void CriaConta(tUsuario *usuario, tConta *conta){
-    conta->usuario = usuario;
 }
 
 int Saque(tConta* conta, float valor){
@@ -62,6 +64,11 @@ void ImprimeRelatorio(tConta **conta, int qtd){
     }
 }
 
-void DeletaConta(tConta *conta){
+void DeletaConta(tConta **conta, int num){
+    int i;
+    for(i=0; i<num; i++){
+        free(conta[i]->usuario);
+        free(conta[i]);
+    }
     free(conta);
 }

@@ -9,12 +9,13 @@ int main(){
     int op = 4, Conta_Destino, Conta_Origem;
     float valor;
     tUsuario *usuario;
-    tConta **conta = malloc(sizeof(tConta*)*5);
+    tConta **conta = InicializaMemoria(5);
 
     do{
         scanf("%d", &op);
         
         switch (op){
+
         case 1:
             /* saque */
             scanf("%d %f", &Conta_Destino, &valor);
@@ -27,6 +28,7 @@ int main(){
             break;
 
         case 3:
+            /* transferencia */
             scanf("%d %d %f", &Conta_Destino, &Conta_Origem, &valor);
             Transferencia(conta[Conta_Destino-1], conta[Conta_Origem-1], valor);
             break;
@@ -34,15 +36,18 @@ int main(){
             /* cadastro */
             scanf("%s %d %d", nome, &cpf, &num_conta);
             usuario = RegistraUsuario(nome, cpf);
-            conta[num] = InicializaConta(num_conta);
-            CriaConta(usuario, conta[num]);
+            conta[num] = InicializaConta(num_conta, usuario);
             num++;
             break;
         case 5:
             ImprimeRelatorio(conta, num);
             break;
+
         }
+
     }while(op!=0);
+
+    DeletaConta(conta, num);
 
     return 0;
 }
