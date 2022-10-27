@@ -9,7 +9,7 @@ int main(){
     int op = 4, Conta_Destino, Conta_Origem;
     float valor;
     tUsuario *usuario;
-    tConta **conta = InicializaMemoria(5);
+    tConta **conta = InicializaMemoria(1);
 
     do{
         scanf("%d", &op);
@@ -34,6 +34,7 @@ int main(){
             break;
         case 4:
             /* cadastro */
+            conta = (tConta**)realloc(conta, (num+1)*sizeof(tConta**));
             scanf("%s %d %d", nome, &cpf, &num_conta);
             usuario = RegistraUsuario(nome, cpf);
             conta[num] = InicializaConta(num_conta, usuario);
