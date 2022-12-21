@@ -12,7 +12,7 @@ main: $(SRCS) $(HEADERS)
 
 main-debug: $(SRCS) $(HEADERS)
 	@$(CC) $(CFLAGS) -O0 $(SRCS) -o "$@" -lm
-	@echo "Debug ompilado!"
+	@echo "Debug Compilado!"
 
 clean:
-	@rm -f main main-debug
+	rm -f main main-debug
